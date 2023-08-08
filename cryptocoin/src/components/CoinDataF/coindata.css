@@ -1,0 +1,19 @@
+.inputBox{
+    /* border: 2px solid red; */
+    margin: 30px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.inputText{
+    width: 30%;
+   padding: 15px 15px;
+   margin-top: 10px;
+   /* margin: 35px; */
+   font-size: 20px;
+   color: white;
+background-color: rgb(219 179 32);
+
+}

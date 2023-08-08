@@ -1,0 +1,39 @@
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(80, 75, 75);
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+   
+    font-family: 'Josefin Sans', sans-serif;
+    border: 1px solid black;
+    z-index: 1;
+    
+}
+
+.topList{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Lora', serif;
+   
+    list-style: none;
+    margin-right: 90px;
+    text-decoration: none;
+}
+.topItem{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Lora', serif;
+  font-size: 30px;
+  text-decoration: none;
+ 
+
+}
+.link{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
