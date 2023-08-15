@@ -26,6 +26,9 @@ const Login = () => {
         }
         catch(err){
           dispatch({type:"LOGIN_FAILURE"});
+          alert("login failed");
+          emailRef.current.value=null;
+          passwordRef.current.value=null;
         
         }
       }

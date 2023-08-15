@@ -40,14 +40,20 @@ try{
     const user= await UserRegister.findOne({
         email:req.body.email
     })
-    
-    !user && res.status(400).json("Invalid Credentials");
+    if( !user){
+        res.status(400).json("Invalid Credentials");
+    }
+else{
+    const validate=await bcrypt.compare(req.body.password, user.password) 
+    if(!validate){
+        res.status(400).json("invalid credential");
+    }
+    else{
+        const {password,...others}=user._doc
+        res.status(200).json(others);
  
-       const validate=await bcrypt.compare(req.body.password, user.password) 
-       !validate && res.status(400).json("invalid credential");
-
-       const {password,...others}=user._doc
-       res.status(200).json(others);
+    }
+}
 
 }catch(err){
 res.status(500).json(err);
